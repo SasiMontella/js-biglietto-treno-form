@@ -23,8 +23,8 @@ if (isNaN(userKm)) {
  }
 
  let finalPrice = ticketPrice.toFixed(2);
- let random = Math.floor(Math.random() * 11);
- let random2 = Math.floor(Math.random() * 10001);
+ let random = Math.floor(Math.random() * 11) + 1;
+ let random2 = Math.floor(Math.random() * 10001) + 1;
 
  document.getElementById("name-surname").innerHTML = userNameSurname;
  document.getElementById("trainCarriage").innerHTML = random;
