@@ -17,34 +17,75 @@
 
 <body class="bg-danger">
   <h1 class="text-white text-center mt-3">CALCOLA IL PREZZO DEL TUO BIGLIETTO</h1>
-<div class="container bg-dark mt-5 rounded-4">
-  <div class="row">
-    <form class="row gy-4 gx-4 align-items-center">
-      <div class="col-4 text-center">
-        <label class="text-white" for="autoSizingInput">Nome e Cognome</label>
-        <input type="text" class="form-control" id="autoSizingInput">
+<div class="container mt-5 rounded-4 shadow p-3 mb-5 bg-body rounded">
+      <div class="row">
+        <form class="row gy-4 gx-4 align-items-center" data-bitwarden-watching="1" onsubmit="userFormComplete(event)">
+          <div class="col-4 text-center">
+            <label class="text-danger m-3 fw-bold " for="credenziali">Nome e Cognome</label>
+            <input type="text" class="form-control" id="credenziali">
+          </div>
+          <div class="col-4 text-center">
+            <label class="text-danger m-3 fw-bold" for="kmTravel">KM da percorrere</label>
+            <div class="input-group">
+              <input type="text" class="form-control" id="kmTravel" >
+            </div>
+          </div>
+          <div class="col-4 text-center">
+            <label class="text-danger m-3 fw-bold" for="age">Fascia d'età</label>
+            <select class="form-select" id="age">
+              <option selected="">Seleziona...</option>
+              <option value="1">Minorenne </option>
+              <option value="2">Maggiorenne</option>
+              <option value="3">Over 65</option>
+            </select>
+          </div>
+          <div class="col-12 mb-4 text-center">
+            <button type="submit" class="btn btn-primary me-md-3">Genera</button>
+            <button type="reset" class="btn btn-primary">Annulla</button>
+          </div>
+        </form>
       </div>
-      <div class="col-4 text-center">
-        <label class="text-white" for="autoSizingInputGroup">KM da percorrere</label>
-        <div class="input-group">
-          <input type="text" class="form-control" id="autoSizingInputGroup" >
+  </div>
+
+  <div class="container bg-light p-4 rounded-2">
+    <div class="row">
+      <h1>Dettagli Biglietto</h1>
+    </div>
+    <div class="card">
+      <div class="row g-0">
+        <div class="col-md-4 bg-dark">
+          <h3 class="text-white text-center">Nome Passeggero</h3>
+          <p class="text-white text-center fw-bold p-3" id="name-surname"></p>
+        </div>
+        <div class="col">
+          <div class="card-body">
+            <h5 class="card-title">Offerta</h5> <br> <br>
+            <p class="card-text">Biglietto standard</p>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card-body">
+            <h5 class="card-title">Carrozza</h5> <br> <br>
+            <p class="card-text" id="trainCarriage"></p>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card-body">
+            <h5 class="card-title">Codice CP</h5> <br> <br>
+            <p class="card-text" id="cpCode"></p>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card-body">
+            <h5 class="card-title">Costo Biglietto</h5> <br> <br>
+            <p class="card-text" id="ticketPrice"> </p>
+          </div>
         </div>
       </div>
-      <div class="col-4 text-center">
-        <label class="text-white" for="autoSizingSelect">Fascia d'età</label>
-        <select class="form-select" id="autoSizingSelect">
-          <option selected="">Seleziona...</option>
-          <option value="1">Minorenne </option>
-          <option value="2">Maggiorenne</option>
-          <option value="3">Over 65</option>
-        </select>
-      </div>
-      <div class="col-12 mb-4 text-center">
-        <button type="submit" class="btn btn-primary">Genera</button>
-      </div>
-    </form>
+    </div>
+
+    
   </div>
-</div>
 
  
 
